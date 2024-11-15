@@ -1,0 +1,13 @@
+[user]
+	email = 
+	name = 
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[commit]
+	# gpgsign = true
+[diff]
+	# external = difft
+[rerere]
+	enabled = true

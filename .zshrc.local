@@ -1,0 +1,40 @@
+# Remove gone branches
+alias gbdr="git fetch -p && for branch in \`git branch -vv | grep ': gone]' | awk '{print \$1}'\`; do git branch -D \$branch; done"
+
+# AWS Vault
+alias av=aws-vault
+ave() {
+  local profile=$1
+  shift
+  aws-vault exec $profile -- $*
+}
+aven() {
+  local profile=$1
+  shift
+  aws-vault exec $profile --no-session -- $*
+}
+
+# mac copy/paste
+alias pbc=pbcopy
+alias pbp=pbpaste
+
+# Laravel
+alias a=./artisan
+alias vapor=vendor/bin/vapor
+
+# Terraform
+alias tf=terraform
+alias tfi="terraform init"
+alias tfp="terraform plan"
+alias tfa="terraform apply"
+alias tfo="terraform output"
+alias tfr="terraform refresh"
+alias btf=bin/terraform
+alias btfi="bin/terraform init"
+alias btfp="bin/terraform plan"
+alias btfa="bin/terraform apply"
+alias btfo="bin/terraform output"
+alias btfr="bin/terraform refresh"
+
+# prevent accidentaly starting ghostscript
+alias gs=gsb
